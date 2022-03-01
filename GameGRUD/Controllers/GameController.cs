@@ -14,7 +14,6 @@ namespace GameGRUD.Controllers
         private GameDBContext db;
         public GameController(GameDBContext context, Repository<Game> _gameRepos, Repository<Genre> _genreRepos)
         {
-           
             genreRepos = _genreRepos;
             gameRepos = _gameRepos;
             db = context;
@@ -34,7 +33,6 @@ namespace GameGRUD.Controllers
                 Console.WriteLine(game);
                 return Json(game);
             }
-
             return Json("");
         }
         public void InsertGame(Game game)
@@ -66,7 +64,6 @@ namespace GameGRUD.Controllers
                 return Json(games);
             }
             return Json("");
-
         }
     }
 }
